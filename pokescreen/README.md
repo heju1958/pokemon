@@ -31,7 +31,7 @@
 
   ### [`doc`](https://pt-br.reactjs.org/docs/getting-started.html)
 
-- TypesCript
+- TypeScript
 
   ### [`doc`](https://www.typescriptlang.org/docs/)
 
