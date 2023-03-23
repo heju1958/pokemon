@@ -1,5 +1,5 @@
 <h1 align = "center">
-	<img src='https://www.svgrepo.com/svg/276264/pokeball-pokemon.svg' alt='Icone de anotações' width='30px' height='30px'/>
+	<img src="https://www.svgrepo.com/svg/276264/pokeball-pokemon.svg" alt='' width='30px' height='30px'/>
 	PokeScreen
 </h1>
 
