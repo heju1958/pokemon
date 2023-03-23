@@ -8,7 +8,7 @@
 	Deploy
 </h3>
 
-### [`Quiz`](https://pokescreen.vercel.app/)
+### [`PokePage`](https://pokescreen.vercel.app/)
 
 #
 
