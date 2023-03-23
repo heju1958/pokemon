@@ -1,6 +1,8 @@
 <h1 align = "center">
+	<img src='https://www.svgrepo.com/svg/276264/pokeball-pokemon.svg' alt='Icone de anotações' width='30px' height='30px'/>
 	PokeScreen
 </h1>
+
 
 ### [`Figma`](https://www.figma.com/file/WYsQclXV1S05fQgCDm49T1/Pokemon?node-id=0%3A1&t=bmHM0gX8gZA2RYR1-1)
 
