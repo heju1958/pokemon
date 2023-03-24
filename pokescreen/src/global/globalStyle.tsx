@@ -40,6 +40,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 400;
     font-size: 1rem;
     color: var(--text-1);
+    list-style: none;
   }
   button {
     cursor: pointer;

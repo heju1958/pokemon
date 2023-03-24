@@ -1,7 +1,9 @@
+import PokeItem from "../../components/PokeItem";
+
 const PokePage = () => {
   return (
     <>
-      <p>Pokepage</p>
+      <PokeItem />
     </>
   );
 };

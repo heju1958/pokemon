@@ -1,7 +1,11 @@
+import PokeCard from "../../components/PokeCard";
+import Header from "../../components/Header";
+
 const Dashboard = () => {
   return (
     <>
-      <p>Dashboard</p>
+      <Header />
+      <PokeCard />
     </>
   );
 };
