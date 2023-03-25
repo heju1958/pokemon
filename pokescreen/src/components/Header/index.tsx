@@ -1,8 +1,9 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { PokemonContext } from "../../contexts/pokemonContext";
 
 const Header = () => {
-  const { setSearch } = useContext(PokemonContext);
+  const [search, setSearch] = useState("");
+  const { getPokemon } = useContext(PokemonContext);
 
   return (
     <div>
@@ -11,6 +12,7 @@ const Header = () => {
         type="text"
         placeholder="Pesquise seu pokémon"
       />
+      <button onClick={() => getPokemon(search)}>Pesquisar</button>
     </div>
   );
 };

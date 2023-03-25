@@ -6,8 +6,8 @@ const Dashboard = () => {
   return (
     <>
       <Header />
-      <PokeCard />
       <Buttons />
+      <PokeCard />
     </>
   );
 };

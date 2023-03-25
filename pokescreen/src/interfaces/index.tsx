@@ -1,10 +1,16 @@
 import { ReactNode, SetStateAction } from "react";
 
 export interface IPokemonContext {
-  arrayFilter: IPoke[];
+  pokeList: IPoke[];
+  pokemons: IPoke | undefined;
   pokeItem: IPoke;
+  pokeListData: IPoke[] | unknown[];
+  getPokemon: (input: string) => Promise<void>;
+  pokemonsData: (list: any) => void;
+  currentFunction: () => void;
+  nextPage: () => void;
+  previusPage: () => void;
   setPokeItem: React.Dispatch<SetStateAction<IPoke>>;
-  setSearch: (data: string) => void;
 }
 
 export interface IPokemonProps {
