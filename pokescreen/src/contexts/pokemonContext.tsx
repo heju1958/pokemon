@@ -36,9 +36,9 @@ export const PokemonProvider = ({ children }: IPokemonProps) => {
       });
   };
 
-  // const [currentPage, setCurrentPage] = useState(
-  //   "https://pokeapi.co/api/v2/pokemon/"
-  // );
+  const [currentPage, setCurrentPage] = useState(
+    "https://pokeapi.co/api/v2/pokemon/"
+  );
 
   // useEffect(() => {
   //   fetch(currentPage)

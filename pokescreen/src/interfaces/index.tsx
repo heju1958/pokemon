@@ -20,7 +20,7 @@ export interface IPoke {
   };
   weight: number;
   next: string;
-  prev: string;
+  previous: string;
 }
 
 export interface IRes {
