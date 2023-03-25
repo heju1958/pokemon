@@ -1,3 +1,4 @@
+import { AxiosHeaders } from "axios";
 import { ReactNode, SetStateAction } from "react";
 
 export interface IPokemonContext {
@@ -6,7 +7,7 @@ export interface IPokemonContext {
   pokeItem: IPoke;
   pokeListData: IPoke[] | unknown[];
   getPokemon: (input: string) => Promise<void>;
-  pokemonsData: (list: any) => void;
+  pokemonsData: (list: IEndpoint[]) => void;
   currentFunction: () => void;
   nextPage: () => void;
   previusPage: () => void;
@@ -27,6 +28,7 @@ export interface IPoke {
   weight: number;
   next: string;
   previous: string;
+  url: string;
 }
 
 export interface IRes {
@@ -40,4 +42,18 @@ export interface IAbility {
   };
   slot: number;
   is_hidden: boolean;
+}
+
+export interface IEndpoint {
+  name: string;
+  url: string;
+}
+
+export interface IObj {
+  data: {};
+  status: number;
+  statusText: string;
+  headers: AxiosHeaders;
+  config: {};
+  request: XMLHttpRequest;
 }

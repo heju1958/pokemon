@@ -33,6 +33,7 @@ const PokeCard = () => {
         </li>
       ) : (
         pokeListData?.map((poke: any) => {
+          // console.log(poke);
           return (
             <li
               key={poke.data.id}

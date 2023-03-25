@@ -3,7 +3,13 @@ import api from "../api";
 
 import { createContext, useState, useEffect } from "react";
 
-import { IPoke, IPokemonContext, IPokemonProps, IRes } from "../interfaces";
+import {
+  IPoke,
+  IPokemonContext,
+  IPokemonProps,
+  IRes,
+  IEndpoint,
+} from "../interfaces";
 export const PokemonContext = createContext<IPokemonContext>(
   {} as IPokemonContext
 );
@@ -15,10 +21,11 @@ export const PokemonProvider = ({ children }: IPokemonProps) => {
   const [pokeListData, setPokeListData] = useState<IPoke[] | unknown[]>(
     [] as IPoke[]
   );
-  const [test, setTest] = useState<any>();
+  const [obj, setObj] = useState<any>();
+  // console.log(obj);
 
   const [currentPage, setCurrentPage] = useState(
-    "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=8"
+    "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=6"
   );
 
   useEffect(() => {
@@ -29,31 +36,31 @@ export const PokemonProvider = ({ children }: IPokemonProps) => {
     await axios
       .get(currentPage)
       .then((res) => {
-        setTest(res);
+        setObj(res);
         setPokeList(res.data.results);
       })
       .catch((err) => console.log(err));
   };
 
   const nextPage = () => {
-    changePages(test.data.next);
+    changePages(obj.data.next);
   };
 
   const previusPage = () => {
-    changePages(test.data.previous);
+    changePages(obj.data.previous);
   };
 
   const changePages = async (url: string) => {
     await axios.get(url).then((res) => {
-      setTest(res);
+      setObj(res);
       setPokeList(res.data.results);
     });
   };
 
-  const pokemonsData = (list: any) => {
+  const pokemonsData = (list: IEndpoint[]) => {
     let url = "https://pokeapi.co/api/v2/pokemon";
 
-    const endpoints = list.map((elem: any) => {
+    const endpoints = list.map((elem) => {
       return axios.get(`${url}/${elem.name}`);
     });
     axios.all(endpoints).then(
@@ -68,12 +75,6 @@ export const PokemonProvider = ({ children }: IPokemonProps) => {
       setPokemons(res.data);
     });
   };
-
-  // const pokemonList = async () => {
-  //   await api.get("").then((res) => {
-  //     setPokeList(res.data.results);
-  //   });
-  // };
 
   return (
     <PokemonContext.Provider
@@ -95,6 +96,6 @@ export const PokemonProvider = ({ children }: IPokemonProps) => {
   );
 };
 
-// tipar 4 any
+// tipar 2 any
 // quebra na pokepage
 // estilizar
