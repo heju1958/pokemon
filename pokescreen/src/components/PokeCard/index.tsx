@@ -18,6 +18,8 @@ const PokeCard = () => {
         >
           <div>
             <p>{poke.name}</p>
+            <img src={poke.sprites.front_default} alt="" />
+            <p></p>
           </div>
         </li>
       ))}

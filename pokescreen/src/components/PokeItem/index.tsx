@@ -8,8 +8,14 @@ const PokeItem = () => {
     <>
       <div>
         <p>{pokeItem?.name}</p>
+        <img src={pokeItem.sprites.front_default} alt="" />
         {pokeItem?.abilities?.map((elem, index) => {
-          return <p key={index}>{elem?.ability?.name}</p>;
+          return (
+            <div key={index}>
+              <p>{elem?.ability?.name}</p>
+              <span>{elem?.slot}</span>
+            </div>
+          );
         })}
         <p>{pokeItem.weight}</p>
       </div>

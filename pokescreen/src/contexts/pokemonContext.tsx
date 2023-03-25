@@ -1,43 +1,7 @@
 import axios from "axios";
-import {
-  createContext,
-  ReactNode,
-  useState,
-  useEffect,
-  SetStateAction,
-} from "react";
+import { createContext, useState, useEffect } from "react";
 
-interface IPokemonContext {
-  arrayFilter: IPoke[];
-  pokeItem: IPoke;
-  setPokeItem: React.Dispatch<SetStateAction<IPoke>>;
-  setSearch: (data: string) => void;
-}
-
-interface IPokemonProps {
-  children: ReactNode;
-}
-
-interface IPoke {
-  id: number;
-  name: string;
-  abilities: IAbility[];
-  sprites: {};
-  weight: number;
-}
-
-interface IRes {
-  data: IPoke;
-}
-
-interface IAbility {
-  ability: {
-    name: string;
-    url: string;
-  };
-  slot: number;
-  is_hidden: boolean;
-}
+import { IPoke, IPokemonContext, IPokemonProps, IRes } from "../interfaces";
 
 export const PokemonContext = createContext<IPokemonContext>(
   {} as IPokemonContext
@@ -59,7 +23,7 @@ export const PokemonProvider = ({ children }: IPokemonProps) => {
   const getPokemons = () => {
     const endpoints = [];
 
-    for (let i = 1; i < 20; i++) {
+    for (let i = 1; i < 10; i++) {
       endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`);
     }
     axios
@@ -72,6 +36,25 @@ export const PokemonProvider = ({ children }: IPokemonProps) => {
       });
   };
 
+  // const [currentPage, setCurrentPage] = useState(
+  //   "https://pokeapi.co/api/v2/pokemon/"
+  // );
+
+  // useEffect(() => {
+  //   fetch(currentPage)
+  //     .then((res) => res.json())
+  //     .then((res) => setPokemons(res))
+  //     .catch((err) => console.log(err));
+  // }, [currentPage]);
+
+  // const nextPage = () => {
+  //   setCurrentPage(pokemons.next);
+  // };
+
+  // const previusPage = () => {
+  //   setCurrentPage(pokemons.previous);
+  // };
+
   return (
     <PokemonContext.Provider
       value={{ arrayFilter, pokeItem, setPokeItem, setSearch }}
@@ -80,3 +63,5 @@ export const PokemonProvider = ({ children }: IPokemonProps) => {
     </PokemonContext.Provider>
   );
 };
+
+// paginação
