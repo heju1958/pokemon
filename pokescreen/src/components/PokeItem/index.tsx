@@ -1,8 +1,10 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { PokemonContext } from "../../contexts/pokemonContext";
 
 const PokeItem = () => {
   const { pokeItem } = useContext(PokemonContext);
+
+  // useEffect(() => {}, [pokeItem]);
 
   return (
     <>

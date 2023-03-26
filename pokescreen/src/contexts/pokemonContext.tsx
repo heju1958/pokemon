@@ -23,15 +23,17 @@ export const PokemonProvider = ({ children }: IPokemonProps) => {
   const [obj, setObj] = useState<any>();
   // console.log(obj);
 
+  //pagination
+
   const [currentPage, setCurrentPage] = useState(
     "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=6"
   );
 
   useEffect(() => {
-    currentFunction();
+    currentPageFunction();
   }, []);
 
-  const currentFunction = async () => {
+  const currentPageFunction = async () => {
     await axios
       .get(currentPage)
       .then((res) => {
@@ -56,11 +58,11 @@ export const PokemonProvider = ({ children }: IPokemonProps) => {
     });
   };
 
-  const pokemonsData = (list: IEndpoint[]) => {
-    let url = "https://pokeapi.co/api/v2/pokemon";
+  //find pokemons
 
+  const pokemonsData = (list: IEndpoint[]) => {
     const endpoints = list.map((elem) => {
-      return axios.get(`${url}/${elem.name}`);
+      return api.get(`/${elem.name}`);
     });
     axios.all(endpoints).then(
       axios.spread((...res) => {
@@ -83,7 +85,7 @@ export const PokemonProvider = ({ children }: IPokemonProps) => {
         pokeList,
         pokeItem,
         setPokeItem,
-        currentFunction,
+        currentPageFunction,
         nextPage,
         previousPage,
         pokemonsData,
@@ -97,4 +99,5 @@ export const PokemonProvider = ({ children }: IPokemonProps) => {
 
 // tipar 2 any
 // quebra na pokepage
-// estilizar
+// estilizar pokepage
+// refinar estilização

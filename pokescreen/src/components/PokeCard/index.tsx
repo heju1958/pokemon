@@ -28,7 +28,6 @@ const PokeCard = () => {
           <div>
             <p>{pokemons.name}</p>
             <img src={pokemons.sprites.front_default} alt="" />
-            <p></p>
           </div>
         </li>
       ) : (
@@ -45,7 +44,6 @@ const PokeCard = () => {
               <div>
                 <p>{poke.data.name}</p>
                 <img src={poke.data.sprites.front_default} alt="" />
-                <p></p>
               </div>
             </li>
           );
