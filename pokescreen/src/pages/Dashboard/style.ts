@@ -14,6 +14,7 @@ export const BoxDashboard = styled.div`
   background-color: var(--color-primary);
   border-radius: 2rem;
   width: 100%;
+  box-shadow: var(--shadow-0);
 
   @media (max-width: 768px) {
     margin: 1rem;

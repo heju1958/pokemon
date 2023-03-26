@@ -18,4 +18,10 @@ export const ContainerSideBar = styled.div`
       width: 5rem;
     }
   }
+
+  @media (max-width: 1300px) {
+    img {
+      width: 4rem;
+    }
+  }
 `;
