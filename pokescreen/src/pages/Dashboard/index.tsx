@@ -7,9 +7,9 @@ const Dashboard = () => {
   return (
     <>
       <SideBar />
-      <Header />
+      {/* <Header />
       <PokeCard />
-      <Buttons />
+      <Buttons /> */}
     </>
   );
 };
