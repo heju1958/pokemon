@@ -7,7 +7,6 @@ import {
   IPoke,
   IPokemonContext,
   IPokemonProps,
-  IRes,
   IEndpoint,
 } from "../interfaces";
 export const PokemonContext = createContext<IPokemonContext>(
