@@ -45,7 +45,7 @@ export const PokemonProvider = ({ children }: IPokemonProps) => {
     changePages(obj.data.next);
   };
 
-  const previusPage = () => {
+  const previousPage = () => {
     changePages(obj.data.previous);
   };
 
@@ -85,7 +85,7 @@ export const PokemonProvider = ({ children }: IPokemonProps) => {
         setPokeItem,
         currentFunction,
         nextPage,
-        previusPage,
+        previousPage,
         pokemonsData,
         pokeListData,
       }}
