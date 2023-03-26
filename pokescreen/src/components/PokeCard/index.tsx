@@ -1,6 +1,7 @@
 import { useContext, useEffect } from "react";
 import { PokemonContext } from "../../contexts/pokemonContext";
 import { useNavigate } from "react-router-dom";
+import { ContainerCard } from "./style";
 
 const PokeCard = () => {
   const { pokeList, setPokeItem, pokemonsData, pokeListData, pokemons } =
@@ -16,7 +17,7 @@ const PokeCard = () => {
   }
 
   return (
-    <>
+    <ContainerCard>
       {pokemons ? (
         <li
           key={pokemons.id}
@@ -26,8 +27,8 @@ const PokeCard = () => {
           }}
         >
           <div>
+            <img src={pokemons.sprites.front_default} alt="poke image" />
             <p>{pokemons.name}</p>
-            <img src={pokemons.sprites.front_default} alt="" />
           </div>
         </li>
       ) : (
@@ -42,14 +43,14 @@ const PokeCard = () => {
               }}
             >
               <div>
-                <p>{poke.data.name}</p>
                 <img src={poke.data.sprites.front_default} alt="" />
+                <p>{poke.data.name}</p>
               </div>
             </li>
           );
         })
       )}
-    </>
+    </ContainerCard>
   );
 };
 
