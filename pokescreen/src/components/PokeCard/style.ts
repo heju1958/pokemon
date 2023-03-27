@@ -12,10 +12,6 @@ export const ContainerCard = styled.ul`
   height: 75%;
   padding: 1rem;
 
-  @media (min-width: 1900px) {
-    padding: 18rem;
-  }
-
   li {
     border-radius: 10px;
     width: 20rem;
