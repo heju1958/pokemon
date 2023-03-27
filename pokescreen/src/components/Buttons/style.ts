@@ -12,9 +12,13 @@ export const ContainerButton = styled.div`
     border-radius: 50%;
     margin-bottom: 1rem;
 
-    img{
+    img {
       margin-top: 0.3rem;
       width: 1rem;
     }
+  }
+
+  button:hover {
+    background-color: var(--red-1);
   }
 `;

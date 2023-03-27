@@ -37,4 +37,8 @@ export const ContainerSearch = styled.div`
       height: 100%;
     }
   }
+
+  button:hover {
+    background-color: var(--yellow-1);
+  }
 `;
