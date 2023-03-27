@@ -36,6 +36,14 @@
 
   ### [`doc`](https://www.typescriptlang.org/docs/)
 
-  #
+  - Framer Motion
 
-author : Helena J Gomes Desenvolvedora Web FullStack
+  ### [`doc`](https://www.npmjs.com/package/framer-motion)
+
+- Keyframes
+
+### [`doc`](https://developer.mozilla.org/pt-BR/docs/Web/CSS/@keyframes)
+
+#
+
+Author : Helena J Gomes Desenvolvedora Web FullStack

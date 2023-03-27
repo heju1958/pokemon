@@ -34,6 +34,17 @@ export const ContainerCard = styled.ul`
         height: 8rem;
       }
     }
+    animation: roll 1.5s;
+  }
+
+  @keyframes roll {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+      background-color: var(--red-2);
+    }
   }
 
   li:hover {

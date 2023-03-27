@@ -33,7 +33,7 @@ export const ContainerPokeItem = styled.div`
   img {
     width: 30rem;
   }
-  @media (max-width: 700px) {
+  @media (max-width: 900px) {
     flex-direction: column;
     padding: 1rem;
     margin-top: 1rem;
@@ -54,6 +54,11 @@ export const ContainerAbilities = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  :hover {
+    transform: scale(1.03);
+    transition: 0.6s;
+  }
 
   span {
     color: var(--yellow-0);

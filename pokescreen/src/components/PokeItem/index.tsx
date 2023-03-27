@@ -7,10 +7,11 @@ import {
 } from "./style";
 
 const PokeItem = () => {
-  const { pokeItem } = useContext(PokemonContext);
+  const { pokeItem, setPokeItem, pokemons } = useContext(PokemonContext);
 
-  // useEffect(() => {}, [pokeItem]);
-
+  // useEffect(() => {
+  //   setPokeItem(pokeItem);
+  // }, [pokemons]);
   return (
     <>
       <ContainerPokeName>

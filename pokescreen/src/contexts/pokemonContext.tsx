@@ -21,7 +21,6 @@ export const PokemonProvider = ({ children }: IPokemonProps) => {
     [] as IPoke[]
   );
   const [obj, setObj] = useState<any>();
-  // console.log(obj);
 
   //pagination
 
@@ -97,5 +96,4 @@ export const PokemonProvider = ({ children }: IPokemonProps) => {
   );
 };
 
-// tipar 2 any
 // quebra na pokepage

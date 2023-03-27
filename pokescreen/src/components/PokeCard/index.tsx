@@ -17,40 +17,39 @@ const PokeCard = () => {
   }
 
   return (
-    <ContainerCard>
-      {pokemons ? (
-        <li
-          key={pokemons.id}
-          onClick={() => {
-            setPokeItem(pokemons);
-            navigate("/pokepage");
-          }}
-        >
-          <div>
-            <img src={pokemons.sprites.front_default} alt="poke image" />
-            <p>{pokemons.name}</p>
-          </div>
-        </li>
-      ) : (
-        pokeListData?.map((poke: any) => {
-          // console.log(poke);
-          return (
-            <li
-              key={poke.data.id}
-              onClick={() => {
-                setPokeItem(poke.data);
-                navigate("/pokepage");
-              }}
-            >
-              <div>
-                <img src={poke.data.sprites.front_default} alt="" />
-                <p>{poke.data.name}</p>
-              </div>
-            </li>
-          );
-        })
-      )}
-    </ContainerCard>
+      <ContainerCard>
+        {pokemons ? (
+          <li
+            key={pokemons.id}
+            onClick={() => {
+              setPokeItem(pokemons);
+              navigate("/pokepage");
+            }}
+          >
+            <div>
+              <img src={pokemons.sprites.front_default} alt="poke image" />
+              <p>{pokemons.name}</p>
+            </div>
+          </li>
+        ) : (
+          pokeListData?.map((poke: any) => {
+            return (
+              <li
+                key={poke.data.id}
+                onClick={() => {
+                  setPokeItem(poke.data);
+                  navigate("/pokepage");
+                }}
+              >
+                <div>
+                  <img src={poke.data.sprites.front_default} alt="" />
+                  <p>{poke.data.name}</p>
+                </div>
+              </li>
+            );
+          })
+        )}
+      </ContainerCard>
   );
 };
 

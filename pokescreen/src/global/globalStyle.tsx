@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
     --grey-1: #B3AEAE;
     --red-0: #C63A3A;
     --red-1: #932222;
+    --red-2: #ffc0c0;
     --yellow-0: #FFD953;
     --yellow-1: #FEC600;
     --shadow-0: 0px 1px 4px 1px rgba(0, 0, 0, 0.25);
