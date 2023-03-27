@@ -7,9 +7,14 @@ export const ContainerCard = styled.ul`
   justify-content: center;
   text-align: center;
   list-style: none;
-  margin: 1rem;
+  margin: 2rem;
   gap: 1.5rem;
   height: 75%;
+  padding: 1rem;
+
+  @media (min-width: 1900px) {
+    padding: 18rem;
+  }
 
   li {
     border-radius: 10px;
