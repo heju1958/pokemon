@@ -3,6 +3,10 @@
 	PokeScreen
 </h1>
 
+<h3 align = "center">
+	API
+</h3>
+
 ### [`API Pokémon`](https://pokeapi.co/docs/v2)
 
 ### [`Figma`](https://www.figma.com/file/WYsQclXV1S05fQgCDm49T1/Pokemon?node-id=0%3A1&t=bmHM0gX8gZA2RYR1-1)
@@ -36,13 +40,13 @@
 
   ### [`doc`](https://www.typescriptlang.org/docs/)
 
-  - Framer Motion
+- Framer Motion
 
   ### [`doc`](https://www.npmjs.com/package/framer-motion)
 
 - Keyframes
 
-### [`doc`](https://developer.mozilla.org/pt-BR/docs/Web/CSS/@keyframes)
+  ### [`doc`](https://developer.mozilla.org/pt-BR/docs/Web/CSS/@keyframes)
 
 #
 
