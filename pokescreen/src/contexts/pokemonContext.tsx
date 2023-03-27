@@ -99,5 +99,3 @@ export const PokemonProvider = ({ children }: IPokemonProps) => {
 
 // tipar 2 any
 // quebra na pokepage
-// estilizar pokepage
-// refinar estilização

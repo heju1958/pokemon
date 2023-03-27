@@ -1,5 +1,10 @@
 import { useContext, useEffect } from "react";
 import { PokemonContext } from "../../contexts/pokemonContext";
+import {
+  ContainerPokeName,
+  ContainerPokeItem,
+  ContainerAbilities,
+} from "./style";
 
 const PokeItem = () => {
   const { pokeItem } = useContext(PokemonContext);
@@ -8,20 +13,27 @@ const PokeItem = () => {
 
   return (
     <>
-      <div>
+      <ContainerPokeName>
         <p>{pokeItem?.name}</p>
+      </ContainerPokeName>
+      <ContainerPokeItem>
         <img src={pokeItem.sprites.front_default} alt="" />
-        <p>Abilities</p>
-        {pokeItem?.abilities?.map((elem, index) => {
-          return (
-            <div key={index}>
-              <p>{elem?.ability?.name}</p>
-              <span>slot {elem?.slot}</span>
-            </div>
-          );
-        })}
-        <p>weight {pokeItem.weight}</p>
-      </div>
+        <ContainerAbilities>
+          <p>Abilities</p>
+          {pokeItem?.abilities?.map((elem, index) => {
+            return (
+              <div key={index}>
+                <p>{elem?.ability?.name}</p>
+                <span>slot {elem?.slot}</span>
+              </div>
+            );
+          })}
+          <div>
+            <p>weight</p>
+            <span> {pokeItem.weight}</span>
+          </div>
+        </ContainerAbilities>
+      </ContainerPokeItem>
     </>
   );
 };
