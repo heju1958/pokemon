@@ -21,4 +21,11 @@ export const ContainerButton = styled.div`
   button:hover {
     background-color: var(--red-1);
   }
+
+  .pokeItemButton {
+    width: 10rem;
+    height: 3rem;
+    border-radius: 1rem;
+    color: var(--color-primary);
+  }
 `;

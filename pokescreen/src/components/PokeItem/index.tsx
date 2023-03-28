@@ -1,13 +1,15 @@
 import { useContext, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { PokemonContext } from "../../contexts/pokemonContext";
 import {
   ContainerPokeName,
   ContainerPokeItem,
   ContainerAbilities,
 } from "./style";
+import { ContainerButton } from "../Buttons/style";
 
 const PokeItem = () => {
+  const navigate = useNavigate();
   const { pokemons, getPokeDetail, pokeItem } = useContext(PokemonContext);
   const { name } = useParams();
 
@@ -40,6 +42,16 @@ const PokeItem = () => {
           </div>
         </ContainerAbilities>
       </ContainerPokeItem>
+      <ContainerButton>
+        <button
+          onClick={() => {
+            navigate("/");
+          }}
+          className="pokeItemButton"
+        >
+          Voltar ao inicio
+        </button>
+      </ContainerButton>
     </>
   );
 };
