@@ -27,6 +27,8 @@
 	Rotas
 </h3>
 
+`/ Ao clicar na logo pokebola, você retornará sempre a tela inicial`
+
 - `/ - Dashboard Screen`
 - `/pokepage - Pokemon Screen`
 
