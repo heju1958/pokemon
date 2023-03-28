@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const SideBar = () => {
   const navigate = useNavigate();
+
   return (
     <ContainerSideBar>
       <img
@@ -13,6 +14,7 @@ const SideBar = () => {
         alt="poke logo"
         onClick={() => {
           navigate("/");
+          window.location.reload();
         }}
       />
       <img src={pokeLogo} alt="poke logo" />

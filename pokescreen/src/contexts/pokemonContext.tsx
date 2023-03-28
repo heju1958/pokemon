@@ -14,13 +14,13 @@ export const PokemonContext = createContext<IPokemonContext>(
 );
 
 export const PokemonProvider = ({ children }: IPokemonProps) => {
+  const [obj, setObj] = useState<any>();
   const [pokemons, setPokemons] = useState<IPoke | undefined>();
   const [pokeItem, setPokeItem] = useState<IPoke>({} as IPoke);
   const [pokeList, setPokeList] = useState<IPoke[]>([] as IPoke[]);
   const [pokeListData, setPokeListData] = useState<IPoke[] | unknown[]>(
     [] as IPoke[]
   );
-  const [obj, setObj] = useState<any>();
 
   //pagination
 
@@ -95,7 +95,7 @@ export const PokemonProvider = ({ children }: IPokemonProps) => {
         previousPage,
         getPokemonsData,
         pokeListData,
-        getPokeDetail
+        getPokeDetail,
       }}
     >
       {children}

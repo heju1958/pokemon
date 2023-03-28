@@ -17,6 +17,8 @@ export const ContainerCard = styled.ul`
     width: 20rem;
     height: 16rem;
     box-shadow: var(--shadow-1);
+    cursor: pointer;
+
     img {
       width: 12rem;
       height: 12rem;
