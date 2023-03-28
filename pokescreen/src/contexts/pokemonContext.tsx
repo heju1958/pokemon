@@ -59,7 +59,7 @@ export const PokemonProvider = ({ children }: IPokemonProps) => {
 
   //find pokemons
 
-  const pokemonsData = (list: IEndpoint[]) => {
+  const getPokemonsData = (list: IEndpoint[]) => {
     const endpoints = list.map((elem) => {
       return api.get(`/${elem.name}`);
     });
@@ -76,6 +76,12 @@ export const PokemonProvider = ({ children }: IPokemonProps) => {
     });
   };
 
+  const getPokeDetail = async (name: string) => {
+    return await api.get(`/${name}`).then((res) => {
+      setPokeItem(res.data);
+    });
+  };
+
   return (
     <PokemonContext.Provider
       value={{
@@ -87,13 +93,12 @@ export const PokemonProvider = ({ children }: IPokemonProps) => {
         currentPageFunction,
         nextPage,
         previousPage,
-        pokemonsData,
+        getPokemonsData,
         pokeListData,
+        getPokeDetail
       }}
     >
       {children}
     </PokemonContext.Provider>
   );
 };
-
-// quebra na pokepage

@@ -7,7 +7,7 @@ const RoutesMain = () => {
   return (
     <Routes>
       <Route path="/" element={<Dashboard />} />
-      <Route path="/pokepage" element={<PokePage />} />
+      <Route path="/pokepage/:name" element={<PokePage />} />
     </Routes>
   );
 };

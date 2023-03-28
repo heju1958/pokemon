@@ -7,10 +7,11 @@ export interface IPokemonContext {
   pokeItem: IPoke;
   pokeListData: IPoke[] | unknown[];
   getPokemon: (input: string) => Promise<void>;
-  pokemonsData: (list: IEndpoint[]) => void;
+  getPokemonsData: (list: IEndpoint[]) => void;
   currentPageFunction: () => void;
   nextPage: () => void;
   previousPage: () => void;
+  getPokeDetail: (name: string) => Promise<void>;
   setPokeItem: React.Dispatch<SetStateAction<IPoke>>;
 }
 

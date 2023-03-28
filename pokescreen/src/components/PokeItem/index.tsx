@@ -1,4 +1,5 @@
 import { useContext, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { PokemonContext } from "../../contexts/pokemonContext";
 import {
   ContainerPokeName,
@@ -7,18 +8,22 @@ import {
 } from "./style";
 
 const PokeItem = () => {
-  const { pokeItem, setPokeItem, pokemons } = useContext(PokemonContext);
+  const { pokemons, getPokeDetail, pokeItem } = useContext(PokemonContext);
+  const { name } = useParams();
 
-  // useEffect(() => {
-  //   setPokeItem(pokeItem);
-  // }, [pokemons]);
+  useEffect(() => {
+    if (name) {
+      getPokeDetail(name);
+    }
+  }, [pokemons]);
+
   return (
     <>
       <ContainerPokeName>
         <p>{pokeItem?.name}</p>
       </ContainerPokeName>
       <ContainerPokeItem>
-        <img src={pokeItem.sprites.front_default} alt="" />
+        <img src={pokeItem?.sprites?.front_default} alt="" />
         <ContainerAbilities>
           <p>Abilities</p>
           {pokeItem?.abilities?.map((elem, index) => {
